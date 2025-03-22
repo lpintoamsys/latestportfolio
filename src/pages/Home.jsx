@@ -29,13 +29,13 @@ export default function Home() {
       >
         {/* Name and Title Card */}
         <motion.div
-          className="bg-gradient-to-br from-purple-700 to-indigo-700 p-8 rounded-lg shadow-lg mb-8"
+          className="bg-gradient-to-br from-purple-700 to-indigo-700 p-8 rounded-lg shadow-lg mb-8 italic"
           variants={itemVariants}
         >
           <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400">
             Lawrence Pinto
           </h1>
-          <h2 className="text-xl font-semibold mt-4 text-pink-300">
+          <h2 className="text-xl font-semibold mt-4">
             Agile / Technical Program Manager | Senior Engineering Manager | Digital
             Transformation | Generative AI | Delivery Manager
           </h2>
