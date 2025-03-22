@@ -51,7 +51,7 @@ export default function DomainExpertise() {
       >
         {/* Heading */}
         <motion.h1
-          className="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400"
+          className="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400 mt-20"
           variants={itemVariants}
         >
           Domain Expertise
@@ -68,10 +68,10 @@ export default function DomainExpertise() {
               className="bg-gradient-to-br from-purple-700 to-indigo-700 p-6 rounded-lg shadow-lg"
               variants={itemVariants}
             >
-              <h2 className="text-2xl font-semibold mb-4 text-pink-300">
+              <h2 className="text-xl font-semibold mb-4 text-pink-300">
                 {domain.name}
               </h2>
-              <p className="text-lg text-gray-300">{domain.description}</p>
+              <p className="text-md text-gray-300">{domain.description}</p>
             </motion.div>
           ))}
         </motion.div>
