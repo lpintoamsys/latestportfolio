@@ -23,10 +23,16 @@ export default function Certifications() {
     "Certified Scrum Master (CSM)",
     "Scaled Agile Framework (SAFe)",
     "AWS Cloud Foundation Certified",
+    "Prompt Engineering with LangChain",
+    "Leveraging PostgreSQL with RAG",
+    "Master Retrieval Augmented Generation (RAG)",
+    "Java Programming Master Class",
+    "HIPAA for Business Associates",
+    "Learning the OWASP Top 10",
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 to-indigo-900 text-white p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 text-white p-8">
       <motion.div
         className="max-w-4xl mx-auto"
         variants={containerVariants}
@@ -35,7 +41,7 @@ export default function Certifications() {
       >
         {/* Heading */}
         <motion.h1
-          className="text-4xl font-bold mt-20 mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400"
+          className="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400"
           variants={itemVariants}
         >
           Certifications
@@ -53,7 +59,7 @@ export default function Certifications() {
               variants={itemVariants}
             >
               <div className="flex-1">
-                <p className="text-xl font-semibold">{certification}</p>
+                <p className="text-md font-semibold">{certification}</p>
               </div>
             </motion.div>
           ))}

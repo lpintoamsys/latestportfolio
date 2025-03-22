@@ -171,11 +171,11 @@ export default function Experience() {
               <h2 className="text-xl font-semibold mb-2 text-pink-300">
                 {experience.position}
               </h2>
-              <p className="text-sm font-medium mb-2">
+              <p className="text-md font-medium mb-2">
                 {experience.organization} | {experience.duration} |{" "}
                 {experience.location}
               </p>
-              <ul className="list-disc list-inside text-lg text-gray-300 space-y-2">
+              <ul className="list-disc list-inside text-sm text-gray-300 space-y-2">
                 {experience.responsibilities.map((responsibility, i) => (
                   <li key={i}>{responsibility}</li>
                 ))}

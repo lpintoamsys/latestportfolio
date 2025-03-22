@@ -20,7 +20,7 @@ const itemVariants = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 text-white p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 text-white p-8 italic">
       <motion.div
         className="max-w-4xl mx-auto"
         variants={containerVariants}
@@ -109,7 +109,7 @@ export default function Home() {
         >
           <FaUserCheck className="text-4xl text-pink-400" />
           <div>
-            <p className="text-2xl font-bold text-green-400">
+            <p className="text-xl font-bold text-green-400">
               Available to Join Immediately
             </p>
           </div>
