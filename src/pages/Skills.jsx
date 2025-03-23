@@ -19,44 +19,45 @@ const itemVariants = {
 export default function Skills() {
   const skills = {
     "Agile Methodologies": ["Scrum", "Kanban", "SAFe"],
+    "Project & Delivery Management": [
+      "End to End Delivery",
+      "Agile Transformation",
+      "Engineering Best Practices",
+      "Code Review",
+      "Release Management",
+      "Technical Roadmap",
+      "Customer / Risk Management",
+      "Stakeholder Management",
+      "Budget Management",
+      "Jira", "Confluence",
+    ],
+    "Architecture": [
+      "Microservices",
+      "Monolith",
+      "Event-Driven Architecture",
+      "Software Design Best Practices",
+      "API Design",
+    ],
     "DevOps & DevSecOps": [
       "CI/CD",
       "Azure Pipelines",
+      "Jenkins",
+      "Git",
       "Docker",
       "Kubernetes",
       "Grafana / Prometheus",
       "Sentry",
     ],
-    "Cloud Platforms": ["AWS", "Azure", "Cloud Strategy"],
+    "Cloud Platforms": ["AWS", "Azure", "Cloud Strategy", "Cloud Migration", "Cloud Costing"],
     "Programming Languages": ["Java", "Python", "JavaScript"],
     "Frameworks & Libraries": ["Spring Boot", "React", "Node.js"],
     "Databases": ["MySQL", "MongoDB", "Redis"],
-    "Architecture": [
-      "Microservices",
-      "Monolith",
-      "Event-Driven Architecture",
-      "Software Design",
-    ],
     "Tools & Technologies": [
       "Kafka",
       "Key Cloak",
       "Stripe",
       "Gen AI",
       "Microsoft Project",
-    ],
-    "Software Development Lifecycle (SDLC)": [
-      "Engineering Best Practices",
-      "Code Review",
-      "Release Management",
-    ],
-    "Project & Delivery Management": [
-      "Delivery Management",
-      "Project Management",
-      "Technical Roadmap",
-      "Customer / Risk Management",
-      "Stakeholder Management",
-      "Budget Management",
-      "JIRA",
     ],
     "Compliance & Security": ["GDPR", "HIPAA"],
   };
@@ -75,7 +76,7 @@ export default function Skills() {
             viewport={{ once: true }}
             variants={containerVariants}
           >
-            <h2 className="text-2xl font-semibold mb-6 text-pink-300">
+            <h2 className="text-xl font-semibold mb-6 text-pink-300">
               {category}
             </h2>
             <motion.ul

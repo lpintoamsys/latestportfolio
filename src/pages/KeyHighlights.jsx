@@ -109,10 +109,10 @@ export default function KeyHighlights() {
               className="bg-gradient-to-br from-purple-700 to-indigo-700 p-6 rounded-lg shadow-lg"
               variants={itemVariants}
             >
-              <h2 className="text-md font-semibold mb-4 text-pink-300">
+              <h2 className="text-lg font-semibold mb-4 text-pink-300">
                 {achievement.title}
               </h2>
-              <p className="text-lg text-gray-300">{achievement.description}</p>
+              <p className="text-md text-gray-300">{achievement.description}</p>
             </motion.div>
           ))}
         </motion.div>
