@@ -35,7 +35,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-400">
             Lawrence Pinto
           </h1>
-          <h2 className="text-xl font-semibold mt-4">
+          <h2 className="text-lg font-semibold mt-4">
             Agile / Technical Program Manager | Senior Engineering Manager | Digital
             Transformation | Generative AI | Delivery Manager
           </h2>
