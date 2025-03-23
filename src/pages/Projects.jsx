@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRobot, FaImage, FaNotesMedical, FaVideo, FaHeartbeat, FaFlask, FaCalendarAlt } from 'react-icons/fa';
-import { SiOpenai, SiLangchain } from 'react-icons/si';
+import { FaRobot, FaImage, FaNotesMedical, FaVideo, FaHeartbeat, FaFlask, FaCalendarAlt, 
+         FaHospital, FaRunning, FaDatabase, FaReact, FaNode, FaDocker } from 'react-icons/fa';
+import { SiOpenai, SiLangchain, SiKubernetes,SiSpring, 
+         SiKotlin, SiSwift, SiPostgresql, SiKeycloak } from 'react-icons/si';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -18,7 +20,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const projects = [
+const aiProjects = [
   {
     title: 'Symptoms Checker',
     description: 'AI-powered medical symptoms analysis and preliminary diagnosis system using advanced language models.',
@@ -63,6 +65,27 @@ const projects = [
   },
 ];
 
+const healthcareProjects = [
+  {
+    title: 'Virtual Health Care Application',
+    description: 'Comprehensive virtual healthcare platform enabling remote consultations, appointment scheduling, and secure patient-doctor communication.',
+    icon: FaHospital,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    title: 'Wellness Applications',
+    description: 'Suite of wellness applications focused on mental health, fitness tracking, and personalized health recommendations.',
+    icon: FaRunning,
+    color: 'from-yellow-500 to-orange-500',
+  },
+  {
+    title: 'HL7 Implementation with EHR',
+    description: 'Advanced Electronic Health Record system with HL7 integration for seamless healthcare data exchange and interoperability.',
+    icon: FaDatabase,
+    color: 'from-blue-500 to-cyan-500',
+  },
+];
+
 export default function Projects() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 text-white p-8">
@@ -72,7 +95,7 @@ export default function Projects() {
         initial="hidden"
         animate="visible"
       >
-        {/* Header */}
+        {/* AI Projects Section */}
         <motion.div
           className="text-center mb-12"
           variants={itemVariants}
@@ -80,29 +103,60 @@ export default function Projects() {
           <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 mb-4">
             Generative AI Projects
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg mb-8">
             Exploring the frontiers of AI in healthcare and data analysis
           </p>
+          
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {aiProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+                className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <div className={`bg-gradient-to-r ${project.color} p-6`}>
+                  <project.icon className="text-white text-3xl mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-100 text-sm">
+                    {project.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
 
-        {/* Projects Grid */}
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-              className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
-              <div className={`bg-gradient-to-r ${project.color} p-6`}>
-                <project.icon className="text-white text-3xl mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-100 text-sm">
-                  {project.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+        {/* Healthcare Projects Section */}
+        <motion.div
+          className="text-center mb-12"
+          variants={itemVariants}
+        >
+          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-400 mb-4">
+            Health Care Projects
+          </h1>
+          <p className="text-gray-300 text-lg mb-8">
+            Building innovative solutions for modern healthcare challenges
+          </p>
+          
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {healthcareProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+                className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <div className={`bg-gradient-to-r ${project.color} p-6`}>
+                  <project.icon className="text-white text-3xl mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-100 text-sm">
+                    {project.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Tech Stack Section */}
@@ -114,6 +168,7 @@ export default function Projects() {
             Tech Stack
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
+            {/* AI Technologies */}
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
               <SiOpenai className="text-2xl" />
               <span>OpenAI</span>
@@ -124,17 +179,56 @@ export default function Projects() {
             </div>
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
               <FaRobot className="text-2xl" />
-              <span>BioMistral</span>
+              <span>Mistral</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
               <SiLangchain className="text-2xl" />
               <span>Langchain</span>
             </div>
+            
+            {/* Development Technologies */}
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
-              <SiLangchain className="text-2xl" />
+              <SiKeycloak className="text-2xl" />
+              <span>Keycloak</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <span>Azure B2C</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <FaReact className="text-2xl" />
               <span>React</span>
             </div>
-            
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <SiKotlin className="text-2xl" />
+              <span>Kotlin</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <SiSwift className="text-2xl" />
+              <span>Swift</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <SiPostgresql className="text-2xl" />
+              <span>Postgres</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <FaDocker className="text-2xl" />
+              <span>Docker</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <SiKubernetes className="text-2xl" />
+              <span>Kubernetes</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <span>Azure Pipelines</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <FaNode className="text-2xl" />
+              <span>Node.js</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-6 py-3">
+              <SiSpring className="text-2xl" />
+              <span>Spring Boot</span>
+            </div>
           </div>
         </motion.div>
       </motion.div>
