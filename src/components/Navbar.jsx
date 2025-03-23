@@ -127,6 +127,20 @@ export default function Navbar() {
               Strengths
             </NavLink>
           </li>
+
+          <li>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                `block lg:inline-block text-white hover:text-pink-400 transition-colors p-2 ${
+                  isActive ? "text-pink-400 font-bold" : ""
+                }`
+              }
+            >
+              Projects
+            </NavLink>
+          </li>
+          
           <li>
             <NavLink
               to="/experience"

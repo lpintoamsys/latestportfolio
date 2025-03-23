@@ -7,6 +7,7 @@ import DomainExpertise from "./pages/DomainExpertise";
 import Skills from "./pages/Skills";
 import KeyHighlights from "./pages/KeyHighlights";
 import Strenghts from "./pages/Strengths";
+import Projects from "./pages/Projects";
 import WorkExperience from "./pages/WorkExperience";
 import Educations from "./pages/Educations";
 import References from "./pages/References";
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/highlights" element={<KeyHighlights />}/>
           <Route path="/strengths" element={<Strenghts />}/>
+          <Route path="/projects" element={<Projects />} />
           <Route path="/experience" element={<WorkExperience />} />
           <Route path="/education" element={<Educations />} />
           <Route path="/references" element={<References />} />
