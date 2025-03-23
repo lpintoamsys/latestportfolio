@@ -12,7 +12,7 @@ export default function Navbar() {
     <nav className="bg-gradient-to-r from-purple-900 to-indigo-900 p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo or Brand Name */}
-        <NavLink to="/" className="text-2xl font-bold text-pink-400">
+        <NavLink to="/" className="text-xl font-bold text-pink-400">
           Portfolio of Lawrence Pinto
         </NavLink>
 
@@ -41,7 +41,7 @@ export default function Navbar() {
         <ul
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } lg:flex lg:space-x-6 text-md font-semibold mt-4 lg:mt-0`}
+          } lg:flex lg:space-x-6 text-sm font-semibold mt-4 lg:mt-0`}
         >
           <li>
             <NavLink
@@ -139,6 +139,20 @@ export default function Navbar() {
               Work Experience
             </NavLink>
           </li>
+
+          <li>
+            <NavLink
+              to="/education"
+              className={({ isActive }) =>
+                `block lg:inline-block text-white hover:text-pink-400 transition-colors p-2 ${
+                  isActive ? "text-pink-400 font-bold" : ""
+                }`
+              }
+            >
+              Education
+            </NavLink>
+          </li>
+
           <li>
             <NavLink
               to="/references"

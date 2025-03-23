@@ -8,8 +8,10 @@ import Skills from "./pages/Skills";
 import KeyHighlights from "./pages/KeyHighlights";
 import Strenghts from "./pages/Strengths";
 import WorkExperience from "./pages/WorkExperience";
+import Educations from "./pages/Educations";
 import References from "./pages/References";
 import React from "react";
+
 
 export default function App() {
   return (
@@ -25,6 +27,7 @@ export default function App() {
           <Route path="/highlights" element={<KeyHighlights />}/>
           <Route path="/strengths" element={<Strenghts />}/>
           <Route path="/experience" element={<WorkExperience />} />
+          <Route path="/education" element={<Educations />} />
           <Route path="/references" element={<References />} />
         </Routes>
       </div>
