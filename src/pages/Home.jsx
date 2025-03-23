@@ -27,7 +27,7 @@ export default function Home() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 text-black p-8 italic">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-indigo-900 text-white p-8 italic">
       <motion.div
         className="max-w-4xl mx-auto"
         variants={containerVariants}

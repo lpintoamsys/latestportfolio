@@ -10,6 +10,7 @@ import Strenghts from "./pages/Strengths";
 import WorkExperience from "./pages/WorkExperience";
 import Educations from "./pages/Educations";
 import References from "./pages/References";
+import ChatWidget from "./components/ChatWidget";
 import React from "react";
 
 
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/education" element={<Educations />} />
           <Route path="/references" element={<References />} />
         </Routes>
+        <ChatWidget />
       </div>
     </Router>
   );

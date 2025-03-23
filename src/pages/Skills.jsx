@@ -59,7 +59,7 @@ export default function Skills() {
       "Gen AI",
       "Microsoft Project",
     ],
-    "Compliance & Security": ["GDPR", "HIPAA"],
+    "Compliance": ["GDPR", "HIPAA"],
   };
 
   return (
